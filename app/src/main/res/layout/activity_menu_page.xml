@@ -7,21 +7,52 @@
     tools:context="com.hfad.easyagile.menuPage">
 
 
-
-
-    <ListView
-        android:id="@+id/sprintList"
-        android:layout_width="match_parent"
-        android:layout_height="321dp"
-        android:scrollbars="vertical" />
-
     <Button
         android:id="@+id/learnAgileButton"
         android:layout_width="361dp"
-        android:layout_height="63dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:text="Click Here To Learn Agile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/newProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Start New Project"
+        app:layout_constraintBottom_toTopOf="@+id/learnAgileButton"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="348dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projectList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/projectList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="16dp"
+        android:text="Log Out"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projectList" />
 
 </android.support.constraint.ConstraintLayout>
