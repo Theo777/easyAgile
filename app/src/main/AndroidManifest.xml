@@ -18,7 +18,13 @@
         </activity>
         <activity android:name=".messageBoard" />
         <activity android:name=".menuPage" />
-        <activity android:name=".tutorialPage"></activity>
+        <activity android:name=".tutorialPage" />
+        <activity
+            android:name=".StoryActivity"
+            android:label="@string/title_activity_story"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".StorylistActivity" />
+        <activity android:name=".detailStoryView"></activity>
     </application>
 
 </manifest>
