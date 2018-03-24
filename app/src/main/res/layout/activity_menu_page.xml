@@ -13,6 +13,7 @@
         android:layout_height="71dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
+        android:onClick="learnAgile"
         android:text="Click Here To Learn Agile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -43,27 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-<<<<<<< HEAD
-        android:id="@+id/learnAgileButton"
-        android:layout_width="361dp"
-        android:layout_height="63dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="56dp"
-        android:text="Click Here To Learn Agile"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sprintList" />
-=======
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="87dp"
-        android:layout_marginLeft="16dp"
-        android:text="Log Out"
+   
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/projectList" />
->>>>>>> 9b527205456de4ab2496680646e82f07d6c001a6
 
 </android.support.constraint.ConstraintLayout>

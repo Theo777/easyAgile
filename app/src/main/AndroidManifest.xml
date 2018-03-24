@@ -24,7 +24,8 @@
             android:label="@string/title_activity_story"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StorylistActivity" />
-        <activity android:name=".detailStoryView"></activity>
+        <activity android:name=".detailStoryView" />
+        <activity android:name=".firstLearn"></activity>
     </application>
 
 </manifest>
