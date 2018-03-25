@@ -21,4 +21,12 @@ public class homePage extends AppCompatActivity {
 
     }
 
+    public void onnewUser(View view){
+
+        Intent intent = new Intent(this,newUserActivity.class);
+
+        startActivity(intent);
+
+    }
+
 }

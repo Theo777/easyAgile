@@ -25,7 +25,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StorylistActivity" />
         <activity android:name=".detailStoryView" />
-        <activity android:name=".firstLearn"></activity>
+        <activity android:name=".firstLearn" />
+        <activity android:name=".newUserActivity"></activity>
     </application>
 
 </manifest>

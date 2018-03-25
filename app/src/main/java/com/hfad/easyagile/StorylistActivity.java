@@ -11,14 +11,14 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StorylistActivity extends AppCompatActivity {
+public class StorylistActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storylist);
 
-        ListView lv = findViewById(R.id.projectList);
+        ListView lv = findViewById(R.id.listView2);
 
 
         List<String> projects = new ArrayList<String>();
@@ -34,7 +34,7 @@ public class StorylistActivity extends AppCompatActivity {
 
         lv.setAdapter(arrayAdapter);
 
-        AdapterView.OnItemClickListener itemClickListener =
+        /*AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> listView,
@@ -48,8 +48,21 @@ public class StorylistActivity extends AppCompatActivity {
                     }
                 };
         //Add the listener to the list view
-        ListView listView = (ListView) findViewById(R.id.projectList);
-        listView.setOnItemClickListener(itemClickListener);
+        ListView listView = (ListView) findViewById(R.id.projectList);*/
+        lv.setOnItemClickListener(this);
+    }
+
+
+    public void onItemClick(AdapterView<?> l, View view, int position, long id) {
+        if (position == 0) {
+
+
+            Intent intent = new Intent(StorylistActivity.this,detailStoryView.class);
+            startActivity(intent);
+        }else
+        {
+
+        }
     }
 
     public void onbackButton(View view){

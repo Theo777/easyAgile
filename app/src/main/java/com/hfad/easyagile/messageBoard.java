@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class messageBoard extends AppCompatActivity {
+public class messageBoard extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,23 +20,23 @@ public class messageBoard extends AppCompatActivity {
         setContentView(R.layout.activity_message_board);
 
 
-        ListView lv = findViewById(R.id.projectList);
+        ListView lv = findViewById(R.id.listView);
 
 
-        List<String> projects = new ArrayList<String>();
-        projects.add("get sail");
-        projects.add("buy apple watch");
-        projects.add("Invite Theo");
+        List<String> stories = new ArrayList<String>();
+        stories.add("get sail");
+        stories.add("buy apple watch");
+        stories.add("Invite Theo");
 
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
-                projects );
+                stories );
 
         lv.setAdapter(arrayAdapter);
 
-        AdapterView.OnItemClickListener itemClickListener =
+   /*     AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> listView,
@@ -47,13 +48,25 @@ public class messageBoard extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }
-                };
+                };*/
         //Add the listener to the list view
-        ListView listView = (ListView) findViewById(R.id.projectList);
-        listView.setOnItemClickListener(itemClickListener);
+        //ListView listView = (ListView) findViewById(R.id.projectList);
+        lv.setOnItemClickListener(this);
 
 
 
+    }
+
+    public void onItemClick(AdapterView<?> l, View view, int position, long id) {
+        if (position == 0) {
+
+
+            Intent intent = new Intent(messageBoard.this,StorylistActivity.class);
+            startActivity(intent);
+        }else
+        {
+
+        }
     }
 
     public void onbackButton(View view){
