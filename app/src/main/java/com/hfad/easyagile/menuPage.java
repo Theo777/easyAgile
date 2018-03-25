@@ -58,7 +58,7 @@ public class menuPage extends AppCompatActivity {
 
 
     }
-    public void learnAgile(){
+    public void learnAgile(View view){
         Intent intent = new Intent(menuPage.this,firstLearn.class);
         startActivity(intent);
 

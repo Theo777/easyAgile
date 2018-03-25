@@ -8,15 +8,17 @@
 
 
     <Button
+
         android:id="@+id/learnAgileButton"
         android:layout_width="361dp"
-        android:layout_height="71dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
         android:onClick="learnAgile"
+        android:layout_height="63dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="56dp"
         android:text="Click Here To Learn Agile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/projectList" />
 
     <Button
         android:id="@+id/newProject"
@@ -44,7 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-   
 
 
 </android.support.constraint.ConstraintLayout>
