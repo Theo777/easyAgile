@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:text="Start New Project"
+        android:onClick="onNewProject"
         app:layout_constraintBottom_toTopOf="@+id/learnAgileButton"
         app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,7 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="179dp"
         android:layout_marginStart="8dp"
-        android:text="logOut"
+        android:text="Log Out"
+        android:onClick="logOut"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/learnAgileButton"
         app:layout_constraintTop_toBottomOf="@+id/projectList" />
