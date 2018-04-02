@@ -10,10 +10,10 @@
         android:id="@+id/imageView2"
         android:layout_width="250dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="271dp"
+        android:layout_marginBottom="327dp"
         android:layout_marginStart="54dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintBottom_toTopOf="@+id/newUser"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/agilemainname" />
@@ -23,9 +23,11 @@
         android:layout_width="68dp"
         android:layout_height="37dp"
         android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="40dp"
         android:text="UserName:"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/userName"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -33,40 +35,26 @@
         android:layout_width="65dp"
         android:layout_height="34dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="40dp"
         android:text="Password:"
         app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.778" />
 
     <EditText
-        android:id="@+id/userName"
-        android:layout_width="166dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="92dp"
-        android:ems="10"
-        android:inputType="none|textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
-
-    <EditText
         android:id="@+id/editText2"
         android:layout_width="160dp"
         android:layout_height="41dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="100dp"
+        android:layout_marginRight="36dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.412" />
 
     <Button
         android:id="@+id/submitButton"
@@ -75,23 +63,40 @@
         android:layout_marginBottom="91dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:text="Sign In"
         android:onClick="onsubmitButton"
+        android:text="Sign In"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.726" />
 
     <Button
         android:id="@+id/newUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:onClick="onnewUser"
         android:text="New User"
-        android:onClick="onnewUser";
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="none|textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="428dp" />
+        app:layout_constraintStart_toStartOf="@+id/editText2" />
 </android.support.constraint.ConstraintLayout>
