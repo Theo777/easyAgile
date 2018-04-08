@@ -81,7 +81,14 @@ public class menuPage extends AppCompatActivity implements AdapterView.OnItemCli
 
 
     }
+    public void logOut(View view){
+        Intent intent = new Intent(menuPage.this,homePage.class);
+        startActivity(intent);
+    }
 
 
-
+    public void onNewProject(View view) {
+        Intent intent = new Intent(menuPage.this,newProject.class);
+        startActivity(intent);
+    }
 }

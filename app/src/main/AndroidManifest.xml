@@ -26,7 +26,8 @@
         <activity android:name=".StorylistActivity" />
         <activity android:name=".detailStoryView" />
         <activity android:name=".firstLearn" />
-        <activity android:name=".newUserActivity"></activity>
+        <activity android:name=".newUserActivity" />
+        <activity android:name=".newProject"></activity>
     </application>
 
 </manifest>
