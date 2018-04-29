@@ -81,20 +81,19 @@ public class easyAgileDataBaseHelper extends SQLiteOpenHelper {
             insertUser(db,"neil","123");
 
             db.execSQL("CREATE TABLE PROJECTS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "USER TEXT, "
-                    + "PASSWORD TEXT);");
+                    + "PROJECT TEXT);");
 
             db.execSQL("CREATE TABLE SPRINTS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "USER TEXT, "
-                    + "PASSWORD TEXT);");
+                    + "SPRINT TEXT);");
 
-            db.execSQL("CREATE TABLE TASKS (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "USER TEXT, "
-                    + "PASSWORD TEXT);");
+            db.execSQL("CREATE TABLE STORIES (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "STORY TEXT);");
 
-            db.execSQL("CREATE TABLE  (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    + "USER TEXT, "
-                    + "PASSWORD TEXT);");
+            db.execSQL("CREATE TABLE  DETAILSTORIES (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "NAME TEXT, "
+                    + "DESCRIPTION TEXT, "
+                    + "WORKER TEXT, "
+                    + "STATUS TEXT);");
 
         }
 

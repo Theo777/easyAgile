@@ -19,18 +19,33 @@ import java.util.List;
 
 public class menuPage extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
+    private projectDAO pDAO;
+    private String user;
+    private  ArrayList projects;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_page);
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                user= null;
+            } else {
+                user = extras.getString("username");
+            }
+        } else {
+            user = (String) savedInstanceState.getSerializable("username");
+        }
+
+        pDAO = new projectDAO(this,user);
 
         ListView lv = findViewById(R.id.projectList);
 
 
-        List<String> projects = new ArrayList<String>();
-        projects.add("Sailboat");
-        projects.add("Blue Paint");
-        projects.add("Catch Cheaters");
+         projects = new ArrayList<String>();
+        pDAO.getProjects(projects);
+
 
 
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
@@ -62,17 +77,16 @@ public class menuPage extends AppCompatActivity implements AdapterView.OnItemCli
     }
 
     public void onItemClick(AdapterView<?> l, View view, int position, long id) {
-        if (position == 0) {
-            Button myButton = (Button) findViewById(R.id.learnAgileButton);
-            myButton.setText("dont learn agile");
+
+            String projectName = projects.get(position).toString();
 
             Intent intent = new Intent(menuPage.this,messageBoard.class);
+            Bundle extras = new Bundle();
+            extras.putString("username",user);
+            extras.putString("projectName",projectName);
+            intent.putExtras(extras);
             startActivity(intent);
-        }else
-        {
-            Button myButton = (Button) findViewById(R.id.learnAgileButton);
-            myButton.setText("dont learn agile");
-        }
+
     }
 
     public void learnAgile(View view){
@@ -89,6 +103,7 @@ public class menuPage extends AppCompatActivity implements AdapterView.OnItemCli
 
     public void onNewProject(View view) {
         Intent intent = new Intent(menuPage.this,newProject.class);
+        intent.putExtra("username",user);
         startActivity(intent);
     }
 }

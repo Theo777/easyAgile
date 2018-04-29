@@ -39,7 +39,7 @@ public class homePage extends AppCompatActivity{
 
 
         Intent intent = new Intent(this, menuPage.class);
-
+        intent.putExtra("username",user);
         startActivity(intent);
 
     }else{

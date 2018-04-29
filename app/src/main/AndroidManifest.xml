@@ -27,7 +27,9 @@
         <activity android:name=".detailStoryView" />
         <activity android:name=".firstLearn" />
         <activity android:name=".newUserActivity" />
-        <activity android:name=".newProject"></activity>
+        <activity android:name=".newProject" />
+        <activity android:name=".newSprintActivity" />
+        <activity android:name=".newStoryActivity"></activity>
     </application>
 
 </manifest>
