@@ -60,7 +60,9 @@ public class storyDAO {
         for (int i = 0; i < projectIds.size() ; i++) {
 
             temp = projectIds.get(i).toString();
-            temp = temp.substring(0,userLength);
+            if(temp.length()>userLength) {
+                temp = temp.substring(0, userLength);
+            }
             if(temp.equals(username)){
                 temp =  projectIds.get(i).toString().substring(userLength, projectIds.get(i).toString().length());
                 projects.add(temp);

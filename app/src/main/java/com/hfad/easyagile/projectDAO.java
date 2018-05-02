@@ -60,7 +60,10 @@ public class projectDAO{
         for (int i = 0; i < projectIds.size() ; i++) {
 
             temp = projectIds.get(i).toString();
-            temp = temp.substring(0,userLength);
+            if(temp.length()>userLength) {
+                temp = temp.substring(0, userLength);
+            }
+
             Log.i("getProjects","????????????? username " + username);
             Log.i("getProjects","?????????????     temp " + temp);
             if(temp.equals(username)){

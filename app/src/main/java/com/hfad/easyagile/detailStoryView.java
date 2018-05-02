@@ -61,7 +61,7 @@ public class detailStoryView extends AppCompatActivity {
         Log.i("detailStory",">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>working 6");
         EditText mEdit2;
         mEdit2   = (EditText)findViewById(R.id.storyDescription);
-        mEdit2.setText(stories.get(0).toString());
+        mEdit2.setText(stories.get(0).toString().trim());
         Log.i("detailStory",">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>working 7");
         EditText mEdit3;
         mEdit3   = (EditText)findViewById(R.id.worker);
